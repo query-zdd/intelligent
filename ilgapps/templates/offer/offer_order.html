@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+{% load static %}
+{% block pagecsslink %}
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/offer-manage.css" %}"/>
+    <link href="{% static "css/jquery-accordion-menu.css" %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static "css/banner-edit.css" %}" rel="stylesheet" type="text/css"/>
+    <style>
+        .off-table-list thead tr th {
+            font-weight: 700 !important;
+            line-height: 30px;
+            font-size: 12px;
+            color: #3c3c3c;
+        }
+
+        .off-table-list td {
+            border: None;
+            text-align: left;
+            font-size: 12px;
+            color: #3C3C3C;
+            padding: 5px 0;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .btn.green.mini.edit {
+            background: none;
+            outline: None;
+            border: None;
+            transform: none;
+            font-size: 12px;
+            padding: 0;
+            color: green;
+            border-bottom: 1px solid green;
+        }
+
+        .btn.green.mini.edit:hover {
+            background: none !important;
+            color: green !important;
+        }
+
+        .btn.red.mini.remove {
+            background: none;
+            outline: None;
+            border: None;
+            transform: none;
+            font-size: 12px;
+            padding: 0;
+            color: #d84a38;
+            border-bottom: 1px solid #d84a38;
+        }
+
+        .btn.red.mini.remove:hover {
+            background: none !important;
+            color: #d84a38 !important;
+        }
+    </style>
+
+
+{% endblock %}
+
+
+{% block mtr-top-last %}
+    <li class="mtr-top-last"><span>系统管理</span>><span>订单管理</span></li>
+{% endblock %}
+
+
+{% block mainContent %}
+    <div class="main-content">
+
+
+        <div class="search-add-box" >
+            <div class="page-show" style="float: left">
+                <span>每页显示</span>
+                <select page-custom="step">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+                <span>条记录</span>
+            </div>
+{#            <div class="add-box">#}
+{#                <button id="newGoods">#}
+{#                    <i class="icon-plus"></i>新增餐品信息#}
+{#                </button>#}
+{#            </div>#}
+        </div>
+
+        {% block table %}
+            <div class="table">
+
+                <!--表格head-->
+                <div class="offCon-table">
+                    <table class="off-table-list" border="" cellspacing="" cellpadding="" style="font-weight: bold">
+                        <thead>
+                        <tr>
+                            <th>订单编号</th>
+                            <th>订单图片</th>
+                            <th>订单商品</th>
+                            <th>订单价格</th>
+                            <th>商户名称</th>
+                             <th>订单状态</th>
+                            <th>操作</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for record in paginator.object_list %}
+                            <tr>
+                                <td>{{ record.order_sn }}</td>
+                                {% if record.order_img %}
+                                    <td><img style='width:120px;' src='http://127.0.0.1:8000{{ record.order_img }}'/></td>
+                                {% else %}
+                                    <td></td>
+                                {% endif %}
+
+                                <td>{{ record.goods_name_all }}</td>
+                                <td>{{ record.order_amount }}</td>
+                                <td>{{ record.merchant_name }}</td>
+                                {% if record.status == '0' %}
+                                    <td style="color: red;">待支付</td>
+                                {% else %}
+                                     <td style="color: blue;">已支付</td>
+                                {% endif %}
+
+                                <td>
+                                    <button class='btn green mini edit' id='{{ record.order_id }}'>编辑</button>
+                                    <button class='btn red mini remove' id='{{ record.order_id}}'>删除</button>
+                                </td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+                <!---->
+
+            </div>
+        {% endblock %}
+        <!-- end table-->
+        <div class="page-change-box">
+            <div class="page-show" style="float: left;visibility: hidden">
+                <span>每页显示</span>
+                <select page-custom="step">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+                <span>条记录</span>
+            </div>
+            {% if paginator.paginator.num_pages != 1 %}
+                <div class="page-turning">
+                    <ul min="1" max="{{ paginator.paginator.num_pages }}">
+                        <li><i class="icon-step-backward"></i></li>
+                        {% if paginator.has_previous %}
+                            <li><i class="icon-caret-left" to="{{ paginator.previous_page_number }}"></i></li>
+                        {% endif %}
+                        {% for p in page_num_list %}
+                            {% if p.1 %}
+                                <li class="active">{{ p.0 }}</li>
+                            {% else %}
+                                <li class="inactive">{{ p.0 }}</li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if paginator.has_next %}
+                            <li><i class="icon-caret-right" to="{{ paginator.next_page_number }}"></i></li>
+                        {% endif %}
+                        <li><i class=" icon-step-forward"></i></li>
+
+                    </ul>
+                </div>
+                <div class="page-jump">
+                    <span>跳转到</span>
+                    <input id="to_page" placeholder="请输入">
+                    <button id="page_jump">确定</button>
+                </div>
+            {% endif %}
+            <div class="copy-right">
+                {{ min_item }}-{{ max_item }}条,共{{ paginator.paginator.count }}条
+            </div>
+
+        </div>
+        <div class="modal-scrollable" style="z-index: 10050;">
+            <div id="responsive" class="modal gyedit" tabindex="-1" data-width="760" aria-hidden="false"
+                 style=" display: none; width: 760px; margin-left: -380px; margin-top: 0px;">
+
+                <div class="modal-header">
+
+                    {#                    <button type="button" class="close gyclose" data-dismiss="modal" aria-hidden="true"></button>#}
+
+                    <h3>菜品信息</h3>
+
+                </div>
+
+                <div class="modal-body">
+
+
+                    <div class="portlet-body form form-horizontal">
+                        <!-- BEGIN FORM-->
+                        <input type="hidden" id="order_id">
+                        <input type="hidden" id="bannerUrl">
+
+                        <div class="control-group">
+                            <label class="control-label">菜品名称<span class="required">*</span></label>
+
+                            <div class="controls">
+                                <input id="goods_name_all" type="text" data-required="1" class="m-wrap">
+                            </div>
+                        </div>
+                         <div class="control-group ">
+                            <label class="control-label">订单编号<span class="required">*</span></label>
+
+                            <div class="controls">
+                               <input id="order_sn" type="text" data-required="1" class="m-wrap">
+                            </div>
+                        </div>
+                        <div class="control-group ">
+                            <label class="control-label">订单价格<span class="required">*</span></label>
+
+                            <div class="controls">
+                               <input id="price" type="number" data-required="1" class="m-wrap">
+                            </div>
+                        </div>
+
+
+                        <div class="control-group" id="cover-up">
+                            <label class="control-label">订单图片<span class="required">*</span></label>
+
+                            <div class="controls">
+                                <div id="showBanner" style="width: 180px;height: 100px;border: solid 1px #ccc;float: left"></div>
+                                <input type="hidden" id="bannerPicName">
+                                <label style="float:left;color:grey;margin-left: 10px;" id="sizeRecommendesc">
+                                    <label style="float:right;color:grey">建议尺寸:<span id="sizeRecommend">360*360</span></label>
+                                </label>
+{#                                <form id="form_sample" method="post" enctype="multipart/form-data" style="clear: both;padding-top: 10px!important;height: 33px;">#}
+{#                                    <label class="btn"><input id="bannerPicUpload" name="resource" type="file" style="display: none">选择图片</label>#}
+{#                                </form>#}
+                            </div>
+                        </div>
+
+
+                        <!-- END FORM-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn blue" id="saveOrder">保存</button>
+
+                    <button type="button" data-dismiss="modal" class="btn gyqx">取消</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+{% block pagescript %}
+
+    <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/offeredit/jquery.toggle.buttons.js" %}" type="text/javascript"></script>
+{#    <script src="{% static "js/offeredit/DT_bootstrap.js" %}" type="text/javascript"></script>#}
+    <script src="{% static "js/offeredit/jquery.validate.min.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offeredit/jquery.validate.message_zhcn.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offeredit/dropzone.cn.min.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offeredit/jquery.uniform.min.js" %}" type="text/javascript"></script>
+
+{#    <script src="{% static "js/app.js" %}" type="text/javascript"></script>#}
+    <script src="{% static "js/offeredit/jquery.form.js" %}" type="text/javascript"></script>
+{#    <script src="{% static "ckeditor/ckeditor.js" %}" type="text/javascript"></script>#}
+    <script src="{% static "js/offeredit/upload.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offeredit/select-date.js" %}" type="text/javascript"></script>
+    <script src={% static "js/jquery-accordion-menu.js" %} type="text/javascript"></script>
+    <script src="{% static "js/page-custom.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/app.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offer_order.js" %}" type="text/javascript"></script>
+    <script>
+        jQuery(document).ready(function () {
+
+            order.init();
+            App.init();
+
+
+        });
+
+        $("#offer-order").addClass("ch-active");
+        $("#offer-order").parent("ul.sub-menu").css("display", "block");
+        $("#offer-order").parent("ul.sub-menu").parent("li").addClass("open");
+        $("#offer-order").parent("ul.sub-menu").parent("li").find(".arrow").addClass("open");
+
+    </script>
+
+{% endblock %}

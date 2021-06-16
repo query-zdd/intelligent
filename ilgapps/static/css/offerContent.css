@@ -1,0 +1,771 @@
+button {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+/*-----权益搜索样式----------*/
+.offCon-title {
+    font-size: 18px;
+    color: #3C3C3C;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    margin: 14px 20px;
+}
+
+.offCon-main {
+    border-top: 1px solid #D7D7D7;
+}
+
+.offCon-search-list {
+    /*overflow: hidden;*/
+    margin: 0;
+}
+
+.offCon-search-list > li p {
+    font-size: 12px;
+    color: #4A4A4A;
+    margin: 7px 0;
+}
+
+.offCon-search-list > li {
+    float: left;
+    /*overflow: hidden;*/
+    width: 108px;
+    margin-left: 30px;
+}
+
+.offCon-search-list > li:first-child {
+    margin-left: 20px;
+}
+
+.offCon-select {
+    width: 108px;
+    font-size: 12px;
+    border: 1px solid #B9B9B9;
+    height: 20px;
+
+    color: #4A4A4A;
+
+}
+
+.search-data {
+    width: auto !important;
+}
+
+.search-input-date {
+    width: 108px;
+    font-size: 12px !important;
+    border: 1px solid #B9B9B9;
+    color: #4A4A4A;
+}
+
+.search-btn {
+    width: 60px;
+    height: 20px;
+    background: #EFB034;
+    color: #fff;
+    font-size: 12px;
+    border: None;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.search-bottom {
+    font-size: 12px;
+    color: #8C8C8C;
+    margin: 20px;
+}
+
+/*-----权益搜索样式end------*/
+/*------权益内容表格顶部按钮样式-----*/
+.offCon-list-top {
+    margin: 0 20px;
+}
+
+.offCon-list-top-left > span {
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.offCon-list-top {
+    overflow: hidden;
+}
+
+.offCon-list-top-left {
+    float: left;
+}
+
+.offCon-list-top-right {
+    float: right;
+
+}
+
+.offCon-list-btn {
+    background: #EFB034;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    transform: none;
+    font-size: 12px;
+    color: #fff;
+    padding: 3px 10px;
+    margin-left: 10px;
+}
+
+/*------权益内容表格顶部按钮样式end-----*/
+/*-------权益内容表格样式---------------*/
+.offCon-table {
+    margin: 20px 0;
+}
+
+.off-table-list {
+    width: 100%;
+    border-left: 1px solid #D7D7D7;
+    border-right: 1px solid #D7D7D7;
+}
+
+.off-table-list th {
+    border: None;
+    background: #EFEFEF;
+    border-bottom: #EFEFEF;
+    line-height: 30px;
+    font-size: 12px;
+    color: #3C3C3C;
+
+}
+
+.off-table-list th:first-child {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.off-table-list tr {
+    border-top: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.off-table-list tr td:first-child {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.off-table-list td {
+    border: None;
+    text-align: center;
+    font-size: 12px;
+    color: #3C3C3C;
+    padding: 5px 0;
+}
+
+.off-table-list-twline{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    word-break:break-all;
+    overflow: hidden;
+    padding:0 !important;
+    cursor: pointer;
+    position: relative;
+    height:36px;
+    line-height: 18px;
+}
+ .off-table-tank{
+    position: absolute;
+    bottom: 44px;
+    left: -10%;
+    width:100% ;
+    height: auto;
+    color: #fff;
+    /* border: 1px solid red; */
+    background: #63615e;
+    border-radius: 2px !important;
+    display: none;
+    font-size: 12px;
+    line-height: 19px;
+    z-index: 999;
+    padding: 8px;
+}
+
+.dot-bottom{
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    border-width: 10px;
+    border-color: #63615e;
+    border-bottom-width: 0;
+    border-style: dashed;
+    border-top-style: solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    z-index: 99;
+    bottom: -10px;
+    left: 41%;
+}
+button.off-add {
+    background: none;
+    outline: None;
+    border: None;
+    transform: none;
+    font-size: 12px;
+    color: green;
+    border-bottom: 1px solid green;
+}
+
+button.off-remove {
+    background: none;
+    outline: None;
+    border: None;
+    transform: none;
+    border-bottom: 1px solid #DA3C0A;;
+    color: #DA3C0A;
+    font-size: 12px;
+}
+
+button.off-out {
+    background: none;
+    outline: None;
+    border: None;
+    transform: none;
+    border-bottom: 1px solid #EFB034;
+    color: #EFB034;
+    font-size: 12px;
+}
+button.off-loc {
+    background: none;
+    outline: None;
+    border: None;
+    transform: none;
+    border-bottom: 1px solid #EFB034;
+    color: #EFB034;
+    font-size: 12px;
+}
+button.off-del {
+    background: none;
+    outline: None;
+    border: None;
+    transform: none;
+    border-bottom: 1px solid #DA3C0A;;
+    color: #DA3C0A;
+    font-size: 12px;
+}
+button.off-see {
+    background: none;
+    outline: None;
+    border: None;
+    transform: none;
+    border-bottom: 1px solid #DA3C0A;;
+    color: #DA3C0A;
+    font-size: 12px;
+}
+
+.checker {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+}
+
+.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 -260px;
+    background-image: url("../image/sprite.png");
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+}
+
+.checker input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    border: none;
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    width: 19px;
+    height: 19px;
+}
+
+.checker span.checked {
+    background-position: -76px -260px;
+}
+
+/*-------权益内容表格样式end------------*/
+/*-------权益发送EOP/CQ5的样式------------*/
+.main-content {
+    position: relative;
+}
+
+.edit-form-main {
+    position: fixed;
+    top: 22%;
+    background: #fff;
+    width: 440px;
+    z-index: 10050 !important;
+    left: 33%;
+    border-top: 2px solid #DA3C0A;
+
+}
+
+.edit-form-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    z-index: 10049 !important;
+    opacity: 0.6;
+}
+
+.edit-form-top {
+    font-size: 18px;
+    color: #3C3C3C;
+    padding: 15px 20px;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.edit-form-bottom {
+    padding: 20px;
+}
+
+.edit-form-ul {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.edit-form-ul > li {
+    font-size: 12px;
+    color: #3C3C3C;
+    margin-top: 20px;
+}
+
+.edit-form-ul > li > span {
+    /* padding: 0 5px; */
+    width: 25%;
+    text-align: right;
+    display: inline-block;
+    font-size: 12px;
+    color: #3C3C3C;
+    margin-right: 20px;
+}
+
+.edit-form-span > li > span {
+    width: 18%;
+}
+
+.edit-form-ul > li > span em {
+    font-size: 12px;
+    color: red;
+}
+
+.edit-check {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.edit-select {
+    width: 260px;
+    height: 24px;
+    border: 1px solid #B9B9B9;
+    font-size: 12px;
+    color: #3C3C3C;
+}
+
+.sure-btn {
+    width: 80px;
+    height: 20px;
+    background: #EFB034;
+    border: none;
+    outline: none;
+    transform: none;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.qx-btn {
+    width: 80px;
+    height: 20px;
+    background: #B9B9B9;
+    border: none;
+    outline: none;
+    transform: none;
+    font-size: 12px;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+/*-------权益发送EOP/CQ5的样式end------------*/
+/*-------跳转页的样式-----------------------*/
+.page-change-box {
+    overflow: hidden;
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 0 20px;
+    color: #4A4A4A;
+}
+
+.page-change-box > div {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+
+.page-change-box .page-show {
+    margin-right: 220px;
+}
+
+.page-change-box .page-show select {
+    margin: 0 8px;
+    width: 48px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #B9B9B9;
+}
+
+.page-change-box .page-turning {
+    background-image: linear-gradient(-180deg, #FFFFFF 1%, #EBEBEB 100%);
+    border: 1px solid #efefef;
+    border-radius: 100px !important;
+}
+
+.page-change-box .page-turning ul li {
+    float: left;
+    border-right: 1px solid #E8E8E8;
+    box-shadow: 0 0 0 0 #FFFFFF;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 10px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+}
+
+.page-change-box .page-turning ul li:last-child {
+    border-right: none;
+}
+
+.page-change-box .page-turning ul li i {
+    color: #EFB034;
+}
+
+.page-change-box .page-turning ul li:hover {
+    cursor: pointer;
+}
+
+.page-change-box .page-turning ul li i:hover {
+    cursor: pointer;
+}
+
+.page-change-box .page-turning ul li.active {
+    background-image: linear-gradient(-180deg, #FFFFFF 1%, #EBEBEB 100%);
+    background: rgba(239, 176, 52, 0.80);
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 100px;
+    color: #fff;
+}
+
+.page-change-box .page-jump {
+    margin-left: 10px;
+    /*width: 36px;*/
+    height: 26px;
+    padding-left: 10px;
+    line-height: 24px;
+    /*background-image: linear-gradient(-180deg, #FFFFFF 1%, #EBEBEB 100%);*/
+    /*border: 1px solid #efefef;*/
+    /*border-radius: 24px!important;*/
+    overflow: hidden;
+}
+
+.page-change-box .page-jump input {
+    width: 36px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+    border-radius: 24px !important;
+    border: 1px solid #E8E8E8;
+    outline: none;
+}
+
+.page-change-box .page-jump button {
+    background-image: linear-gradient(-180deg, #FFFFFF 1%, #EBEBEB 100%);
+    border: 1px solid #efefef;
+    border-radius: 24px !important;
+    height: 26px;
+    width: 40px;
+    outline: none;
+}
+
+.page-change-box .page-jump button:hover {
+    cursor: pointer;
+}
+
+.icon-chevron-up:before {
+    transform: scale(0.8, 0.8);
+    -wekit-transform: scale(0.8, 0.8);
+    -moz-transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+}
+
+.icon-chevron-down:before {
+    transform: scale(0.8, 0.8);
+    -wekit-transform: scale(0.8, 0.8);
+    -moz-transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+}
+
+.page-change-box > div.copy-right {
+    clear: both;
+    float: none;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 11px;
+    font-size: 12px;
+    color: #8C8C8C;
+    letter-spacing: 0;
+}
+
+/*-------跳转页的样式end-----------------------*/
+/*--------导出的样式----------------------------*/
+.dao-content {
+    margin-top: 27px;
+    width: 96%;
+    margin: 27px auto 0;
+    background: #fff;
+    height: auto;
+    padding-bottom: 20px;
+    border-top: 2px solid #DA3C0A;
+    display: none;
+    margin-bottom: 27px;
+}
+
+.daoCon-title {
+    padding: 0 20px;
+    overflow: hidden;
+    height: 54px;
+    border-bottom: 1px solid #D7D7D7;
+    /*line-height: 54px;*/
+    font-size: 18px;
+    color: #3C3C3C;
+    font-family: 微软雅黑;
+    font-weight: bold;
+}
+
+.daoCon-title > span {
+    line-height: 54px;
+}
+
+.daoCon-title-right {
+    display: inline-block;
+    float: right;
+    height: 54px;
+    line-height: 52px;
+}
+
+.daoCon-title-ul {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.daoCon-title-ul > li {
+    display: inline-block;
+    color: #8C8C8C;
+    font-size: 18px;
+    margin: 0 20px;
+    height: 52px;
+    line-height: 52px;
+    cursor: pointer;
+}
+
+.daoCon-on {
+    color: #3C3C3C !important;
+    border-bottom: 2px solid #EFB034;
+}
+
+.daoCon-main {
+    width: 95%;
+    height: 451px;
+    /*border: 1px solid #D7D7D7;*/
+    margin: 22px auto;
+    /*overflow-y: scroll;*/
+    /*overflow: hidden;*/
+    /*overflow-x: scroll;*/
+}
+
+.daoCon-main > img {
+    width: 100%;
+}
+
+.daoCon-bottom-left {
+    float: left;
+    overflow: hidden;
+}
+
+.daoCon-btn {
+    background: #EFB034;
+    color: #fff;
+    width: 90px;
+    height: 28px;
+    border: None;
+    transform: none;
+    outline: None;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.daoCon-qx {
+    float: right;
+    background: #B9B9B9;
+
+}
+
+.daoCon-bottom-left > .daoCon-btn {
+    margin-left: 20px;
+}
+
+.daoCon-bottom-left > button:first-child {
+    margin-left: 0;
+}
+
+.daoCon-bottom {
+    overflow: hidden;
+    margin: 0 28px;
+}
+
+/*--------导出的样式end----------------------------*/
+/*--------搜索输入框样式---------------------------*/
+
+.search-add-box {
+    /*border-bottom: 1px solid #D7D7D7;*/
+    overflow: hidden;
+    height: auto;
+    line-height: 53px;
+    padding: 0 20px;
+    min-height: 53px;
+    width: 95%;
+}
+
+.search-add-box .search-box {
+    float: left;
+    margin-right: 50px;
+}
+
+.search-add-box .search-box input {
+    width: 140px;
+    height: 22px;
+    line-height: 17px;
+    border: 1px solid #EFB034;
+    outline-color: #EFB034;
+    font-size: 12px;
+    text-align: center;
+    background: url(../image/ic_search.png) no-repeat 25px center;
+}
+
+.search-add-box .search-box input.focus {
+    background: none;
+}
+
+.search-add-box .search-box button {
+    width: 60px;
+    height: 24px;
+    background: #EFB034;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+.search-result {
+    float: left;
+    margin-top: 14px;
+}
+
+.search-add-box .search-box button:hover {
+    background: #ff9900;
+}
+
+.search-bq {
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    /*background: url("../image/tag_1.png")no-repeat left center;*/
+    /*width:80px;*/
+    float: left;
+    margin-left: 30px;
+    padding: 0 15px;
+    background-size: contain;
+
+    height: 25px;
+    line-height: 25px;
+    background: #eca92f;
+    margin-bottom: 10px;
+
+}
+
+.search-arrow {
+    position: absolute;
+    left: -12px;
+    top: -1px;
+}
+
+.search-arrow > img {
+    vertical-align: middle;
+}
+
+.search-del {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    line-height: 0;
+    cursor: pointer;
+}
+
+/*--------------------搜索框输入样式end--------------------------*/
+/*-------------------批量上传部分的样式----------------------------*/
+.offer-upload {
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.offCon-upmain {
+    float: right;
+    margin-right: 20px;
+}
+
+/*-------------------批量上传部分的样式end----------------------------*/
+
+ul.drop-down {
+    position: absolute;
+    border: 1px solid #d6d6d6;
+    top: 20px;
+    width: 92%;
+    left: 9px;
+    background: #fff;
+    display:none;
+
+}
+ul.drop-down>li:hover{
+    background: #ECE7E7;
+    cursor:pointer;
+    font-size:12px;
+}
+ul.drop-down>li{
+    color:#3c3c3c;
+    text-align: center;
+    height: 20px;
+     font-size:12px;
+}

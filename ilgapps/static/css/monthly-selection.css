@@ -1,0 +1,135 @@
+button {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+/*-----------每月精选----------------*/
+/*每月精选顶部样式*/
+span.mon-select-fanhui {
+    font-size: 14px;
+}
+.mon-select-fanhui img{
+    width:30px;
+    vertical-align: middle;
+    padding-left:20px;
+    margin-right:10px;
+}
+.mon-select{
+        width: 108px;
+    font-size: 12px;
+    border: 1px solid #B9B9B9;
+    height: 20px;
+    color: #4A4A4A;
+}
+.mon-seltop-right{
+    display: inline-block;
+    float:right;
+}
+.mon-select-top .mon-seltop-right span{
+    margin-right:20px;
+}
+.mon-select-top {
+    height: 60px;
+    line-height: 60px;
+}
+/*每月精选顶部样式end*/
+/*每月精选banner样式*/
+.mon-select-banner img{
+    width:100%;
+}
+/*每月精选banner样式end*/
+/*每日精选列表样式*/
+.mon-sellist-ul>li {
+    display: inline-block;
+    width: 30.5%;
+    margin-left: 14px;
+    margin-top:20px;
+    border: 1px solid #dcdcdc;
+    padding-bottom:30px;
+    position: relative;
+    overflow: hidden;
+
+
+}
+.mon-selist-bg{
+    position: absolute;
+    width:100%;
+    height:100%;
+     background-color: #000;
+    opacity: 0.5;
+    top:0;
+    display: none;
+}
+.mon-selist-bg img{
+    width:40px !important;
+
+}
+.mon-selist-xz{
+    text-align: center !important;
+    /*margin-top:44%;*/
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+.mon-selist-xz img{
+    width:auto !important;
+    height:auto !important;
+}
+.mon-sellist-ul>li>a img{
+    width:100%;
+}
+.mon-sellist-ul>li a{
+    color:#4A4A4A;
+    text-align: center;
+    display: block;
+}
+.mon-select-list {
+       width: 96%;
+    margin: 0 auto;
+    padding-left:10px;
+}
+.mon-sellist-title{
+    font-size:15px;
+    font-weight: bold;
+    margin:10px 0;
+    padding-left:6px;
+    text-align: left;
+    overflow: hidden;/*超出部分隐藏*/
+   white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+
+}
+.mon-sellist-title:before {
+    content: '';
+    width: 6px;
+    height: 20px;
+    background: #f89e1b;
+    /* border: 1px solid red; */
+    display: inline-block;
+    top: 5px;
+    position: relative;
+    right: 6px;
+}
+.mon-sellist-ul>li p {
+    line-height: 25px;
+    padding: 0 10px;
+    text-align: left;
+}
+.mon-sellist-cont{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;
+    display: -webkit-box;
+    height:80px;
+}
+.mon-sellist-futitle{
+    overflow: hidden;
+   white-space: nowrap;
+    text-overflow: ellipsis;
+
+
+}
+/*每日精选列表样式end*/

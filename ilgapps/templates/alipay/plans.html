@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数码时钟</title>
+	<style type="text/css">
+	    *{margin:0;padding:0;vertical-align: middle;list-style: none;box-sizing: border-box;}
+		body{background-color: #003;}
+		.main{width: 365px;height: 170px;margin:100px auto;}
+		h3{width: 100%;height: 45px;background:url(images/title.png) no-repeat center;margin-bottom: 40px;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h3></h3>
+		<div style="margin-bottom: 20px;" id="time1">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/year.png">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/month.png">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/seven.png">
+		</div>
+		<div id="time2">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/sign.png">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/sign.png">
+			<img src="images/0.png" class="num">
+			<img src="images/0.png" class="num">
+			<img src="images/week.png">
+			<img src="images/seven.png" class="week">
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var aIm = document.getElementById('time1').getElementsByTagName('img');
+	var aIm1 = document.getElementById('time2').getElementsByTagName('img');
+	var week =['seven','one','two','three','four','five','six'];
+	function toDou(n){
+		if (n<10) {
+			return '0'+n;
+		}else{
+			return ''+n;
+		}
+	}
+	// 获取当前时间，并转换为字符串，循环获取字符串并改变节点图片路径
+	tick();
+	setInterval(tick, 1000);
+    function tick(){
+	 var oDate = new Date();
+	 var num = oDate.getDay();
+	 var str1 = toDou(oDate.getFullYear())+'-'+toDou(oDate.getMonth()+1)+'-'+toDou(oDate.getDate());
+	 for(var i = 0;i<aIm.length-1;i++){
+	     if(str1.charAt(i) == '-'){
+                    continue;
+                }
+	     aIm[i].src = 'images/'+str1.charAt(i)+'.png';
+	    }
+	 var str2 = toDou(oDate.getHours())+':'+toDou(oDate.getMinutes())+':'+toDou(oDate.getSeconds());
+	 //charAt()兼容性要比str[i]好
+	 for(var j = 0;j<aIm1.length-2;j++){
+	 	 if(str2.charAt(j) == ':'){
+                    continue;
+                }
+	     aIm1[j].src = 'images/'+str2.charAt(j)+'.png';
+	    }
+	    aIm1[aIm1.length-1].src = 'images/'+week[num]+'.png';
+	}
+</script>
+————————————————
+版权声明：本文为CSDN博主「_Boboy」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_43720095/article/details/84934046

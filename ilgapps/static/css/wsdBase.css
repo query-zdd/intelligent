@@ -1,0 +1,1000 @@
+/*-------------公共部分样式-----------*/
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    z-index: 1030;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.navbar-fixed-top {
+    top: 0;
+}
+
+img {
+    width: auto \9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+@font-face {
+    font-family: 'PingFangSC-Regular';
+    src: url('../../static/image/PingFang-SC-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, select, input {
+    /*font-family: "黑体",SimHei !important;*/
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+
+}
+
+body {
+    background-color: #858585 !important;
+}
+
+/*------------公共部分样式end---------*/
+/*-------------顶部右侧样式----------*/
+.page-top-right {
+    position: fixed;
+    right: 0;
+    height: 60px;
+    top: 0;
+}
+
+.page-top-right > li {
+    list-style-type: none;
+    float: left;
+    /*line-height: 60px;*/
+    margin: 20px 10px;
+}
+
+.page-top-right > li a {
+    color: #EFB034;
+    font-size: 14px;
+}
+
+.page-top-right > li > a span {
+    display: block;
+    margin: 0;
+}
+
+.login-out {
+    margin: 10px 10px !important;
+    text-align: center;
+
+}
+
+.login-out > a {
+    color: #E61B1B !important;
+
+}
+
+.login-out span {
+    font-size: 12px !important;
+}
+
+.page-content {
+    background: #858585;
+}
+
+/*-----------顶部右侧样式end------*/
+/*-----------顶部定位-----------*/
+.mtr-top {
+    height: 40px;
+    width: 96%;
+    margin: 0 auto;
+    background: #4A4A4A;
+    position: relative;
+
+}
+
+.mtr-top-left {
+    width: 54px;
+    height: 54px;
+    background: #fff;
+    /* vertical-align: middle; */
+    position: absolute;
+    top: -8px;
+    border: 1px solid #4A4A4A;
+    border-radius: 50% !important;
+    left: -11px;
+    line-height: 54px;
+    text-align: center;
+
+}
+
+.mtr-top-right > li {
+    float: left;
+    line-height: 40px;
+    list-style-type: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.mtr-top-right {
+    margin-left: 54px;
+    overflow: hidden;
+
+}
+
+.mtr-top-home {
+    background: #fff;
+    color: #000 !important;
+    font-size: 12px !important;
+    width: 54px;
+}
+
+.mtr-top-home a {
+    color: #000;
+}
+
+.mtr-top-last span {
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+/*-----------顶部定位end--------*/
+/*--------左侧菜单选中样式----------*/
+.ch-active {
+    position: relative;
+}
+
+.ch-active > a:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #EFB034;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+
+/*--------左侧菜单选中样式end-------*/
+
+.main-content {
+    margin-top: 27px;
+    width: 96%;
+    margin: 27px auto 0;
+    background: #fff;
+    height: auto;
+    padding-bottom: 20px;
+    border-top: 2px solid #DA3C0A;
+}
+
+/*===============================fadeIn=============================*/
+.fadeIn-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+}
+
+.fadeIn-box .fadeIn-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 10049 !important;
+    opacity: 0.6;
+}
+
+.fadeIn-main {
+    position: fixed;
+    top: -25%;
+    background: #fff;
+    width: 440px;
+    z-index: 10050 !important;
+    left: 33%;
+    border-top: 2px solid #DA3C0A;
+    opacity: 0;
+    -webkit-transition: opacity .5s linear, top .5s ease-out;
+    -moz-transition: opacity .5s linear, top .5s ease-out;
+    -o-transition: opacity .5s linear, top .5s ease-out;
+    transition: opacity .5s linear, top .5s ease-out;
+}
+
+.fadeIn-main.fade {
+    top: 40%;
+    opacity: 1;
+    -webkit-transition: opacity .5s linear, top .5s ease-out;
+    -moz-transition: opacity .5s linear, top .5s ease-out;
+    -o-transition: opacity .5s linear, top .5s ease-out;
+    transition: opacity .5s linear, top .5s ease-out;
+}
+
+.fadeIn-top {
+    font-size: 18px;
+    color: #3C3C3C;
+    padding: 14px 20px;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.fadeIn-main.del-sure span {
+    display: block;
+    padding-left: 20px;
+    margin-top: 32px;
+}
+
+.fadeIn-middle {
+    padding: 10px 20px;
+}
+
+.fadeIn-bottom {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.fadeIn-bottom button {
+    cursor: pointer;
+}
+
+.sure-btn {
+    width: 80px;
+    height: 28px;
+    background: #EFB034;
+    border: none;
+    outline: none;
+    transform: none;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.sure-btn:hover {
+    background: #ff9900;
+}
+
+.qx-btn {
+    width: 80px;
+    height: 28px;
+    background: #B9B9B9;
+    border: none;
+    outline: none;
+    transform: none;
+    font-size: 12px;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+.qx-btn:hover {
+    background: #B9B9D2;
+}
+
+/*phone-pop*/
+.phone-pop {
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    width: 90%;
+    height: 100px;
+    z-index: 99999;
+    top: 42%;
+    left: 5%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px !important;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 14px;
+    display: none;
+
+}
+
+/*登录login page css*/
+html {
+    height: 100%;
+}
+
+body.login {
+    background-image: linear-gradient(-180deg, #FFFFFF 0%, #ffffff 100%) !important;
+    height: 100%;
+    background-color: transparent !important;
+    overflow: hidden;
+}
+
+.login .logo {
+    width: 213px;
+    height: 51px;
+    margin-top: 38px;
+    margin-left: 32px;
+}
+
+.login .content {
+}
+
+.form-vertical.forget-form {
+    display: block;
+    margin-top: 90px;
+}
+
+.form-vertical.forget-form .form-title {
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /*font-family: "黑体",SimHei !important;*/
+    font-size: 36px;
+    color: #3C3C3C;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-vertical.forget-form .forget {
+    text-align: center;
+}
+
+.form-vertical.forget-form .forget {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-vertical.forget-form .forget .input-box {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 2px solid #D6D6D6;
+    border-radius: 100px !important;
+    width: 296px;
+    margin: auto;
+    position: relative;
+}
+
+.form-vertical.forget-form .forget .input-box span {
+    float: left;
+    display: block;
+    width: 27px;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+
+.form-vertical.forget-form .forget .input-box span i {
+    color: #D6D6D6
+}
+
+.form-vertical.forget-form .forget .input-box span i.icon-envelope:before {
+    top: 11px;
+    position: absolute;
+    left: 10px;
+}
+
+.form-vertical.forget-form .forget .controls input {
+    float: left;
+    border: none;
+    width: 260px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #8C8C8C;
+    letter-spacing: 0;
+    padding-left: 30px !important;
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    padding: 6px;
+}
+
+.form-vertical.forget-form .forget .controls input:focus {
+    outline: none;
+}
+
+.form-vertical.forget-form .form-actions a {
+    background: #EFB034;
+    border-radius: 100px !important;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    border: none;
+    width: 120px;
+    height: 36px;
+    outline: none;
+    margin-bottom: 37px;
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /* font-family: "黑体",SimHei !important; */
+    display: inline-block;
+    padding: 0;
+    line-height: 36px;
+}
+
+.form-vertical.forget-form .form-actions a:hover {
+    background: #EFA617;
+    cursor: pointer;
+}
+
+.form-vertical.forget-form .form-actions button {
+    width: 120px;
+}
+
+.form-vertical.forget-form .form-actions button.disabled {
+    display: none;
+}
+
+/*忘记密码 ----end-----*/
+
+/*确认新密码-----*/
+.form-vertical.new-form {
+    display: block;
+    margin-top: 90px;
+}
+
+.form-vertical.new-form .form-title {
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /*font-family: "黑体",SimHei !important;*/
+    font-size: 36px;
+    color: #3C3C3C;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-vertical.new-form .new-password,
+.form-vertical.new-form .confirm-new-password {
+    text-align: center;
+}
+
+.form-vertical.new-form .new-password {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-vertical.new-form .new-password .input-box,
+.form-vertical.new-form .confirm-new-password .input-box {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 2px solid #D6D6D6;
+    border-radius: 100px !important;
+    width: 296px;
+    margin: auto;
+    position: relative;
+}
+
+.form-vertical.new-form .new-password .input-box span,
+.form-vertical.new-form .confirm-new-password .input-box span {
+    float: left;
+    display: block;
+    width: 27px;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    background-image: url("../image/ic_password.png") !important;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 15px 17px;
+}
+
+.form-vertical.new-form .new-password .controls input,
+.form-vertical.new-form .confirm-new-password .controls input {
+    float: left;
+    border: none;
+    width: 260px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #8C8C8C;
+    letter-spacing: 0;
+    padding-left: 30px !important;
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+}
+
+.form-vertical.new-form .form-actions button:hover {
+    background: #EFA617 !important;
+    color: #ffffff !important;
+
+}
+
+/*确认新密码----end----*/
+
+/*登录---------------------------------*/
+.form-vertical.login-form {
+    /*display: none;*/
+    margin-top: 90px;
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /*font-family: "黑体",SimHei !important;*/
+}
+
+.form-vertical.login-form .form-title {
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /*font-family: "黑体",SimHei !important;*/
+    font-size: 36px;
+    color: #3C3C3C;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-vertical.login-form .username,
+.form-vertical.login-form .password {
+    text-align: center;
+}
+
+.form-vertical.login-form .username {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-vertical.login-form .username .input-box {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 2px solid #D6D6D6;
+    border-radius: 100px !important;
+    width: 296px;
+    margin: auto;
+    position: relative;
+}
+
+.form-vertical.login-form .username .input-box span {
+    float: left;
+    display: block;
+    width: 27px;
+    height: 36px;
+    background-image: url("../image/ic_username.png") !important;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 15px 17px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+
+.form-vertical.login-form .username .controls input {
+    float: left;
+    /*background-color: #FFFFFF;*/
+    /*border: 2px solid #D6D6D6;*/
+    /*border-radius: 100px !important;*/
+    border: none;
+    width: 260px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #8C8C8C;
+    letter-spacing: 0;
+    padding-left: 30px !important;
+    /*background-image: url("../image/ic_username.png") !important;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 10px center;*/
+    /*background-size: 15px 17px;*/
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /*font-family: "黑体",SimHei !important;*/
+}
+
+/*.form-vertical.login-form .username .controls input:focus,*/
+/*.form-vertical.login-form .password .controls input:focus {*/
+/*border: 2px solid #EFB034;*/
+/*}*/
+.form-vertical.login-form .password .input-box {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 2px solid #D6D6D6;
+    border-radius: 100px !important;
+    width: 296px;
+    margin: auto;
+    position: relative;
+}
+
+.form-vertical.login-form .password .input-box span {
+    float: left;
+    display: block;
+    width: 27px;
+    height: 36px;
+    background-image: url("../image/ic_password.png") !important;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 15px 17px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+
+.form-vertical.login-form .password .controls input {
+    float: left;
+    /*background-color: #FFFFFF;*/
+    /*border: 2px solid #D6D6D6;*/
+    /*border-radius: 100px !important;*/
+    border: none;
+    width: 260px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #8C8C8C;
+    letter-spacing: 0;
+    padding-left: 30px !important;
+    /*background-image: url("../image/ic_password.png") !important;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 10px center;*/
+    /*background-size: 15px 17px;*/
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /*font-family: "黑体",SimHei !important;*/
+
+}
+
+.form-vertical.login-form .form-actions button:hover {
+    background: #EFA617 !important;
+    color: #ffffff !important;
+
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-actions button {
+    background: #EFB034;
+    border-radius: 100px !important;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    border: none;
+    width: 300px;
+    height: 36px;
+    outline: none;
+    margin-bottom: 37px;
+    font-family: 'PingFangSC-Regular', "微软雅黑" !important;
+    /*font-family: "黑体",SimHei !important;*/
+
+}
+
+.form-actions button:hover {
+    cursor: pointer;
+}
+
+.form-actions .checkbox span {
+    background: url(../image/sprite.png) no-repeat;
+    background-position: 0 -261px;
+    width: 19px;
+    height: 19px;
+    display: inline-flex;
+}
+
+.form-actions .checkbox span.checked {
+    background-position: -76px -261px;
+}
+
+.form-actions .checkbox span input {
+    opacity: 0;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    text-align: center;
+}
+.copyright a{
+    color:#333;
+}
+.copyright a:hover{
+    text-decoration: underline;
+}
+
+.alert.alert-error {
+    text-align: center;
+    color: #DA3C0A;
+}
+
+/*-----offeredit编辑页面（权益区域的样式修改）-----------*/
+.dq-yx-ul {
+    display: table;
+    border-bottom: 1px solid #d6d6d6;
+    width: 95%;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.dq-yx-ul > li {
+    display: table-cell;
+    line-height: 25px !important;
+    padding: 0 5px;
+}
+
+.dq-yx-ul > li > span {
+    border-radius: 4px !important;
+}
+
+.dq-dazhou {
+    width: 60px;
+}
+
+.dq-dazhou > span {
+    white-space: nowrap;
+    display: inline-block;
+    /* background: #B18F5B; */
+    font-size: 12px;
+    color: #B18F5B;
+    padding: 0px 15px;
+    border: 1px dashed #B18F5B;
+}
+
+.dq-country {
+    width: 120px;
+
+}
+
+.dq-country > span {
+    white-space: nowrap;
+    display: inline-block;
+    /*background: #eca22e;*/
+    font-size: 12px;
+    color: #eca22e;
+    padding: 0px 5px;
+    border: 1px dashed #eca22e;
+}
+
+.dq-city > span {
+    margin-right: 5px;
+    display: inline-block;
+    /*background: #EACFA3;*/
+    font-size: 12px;
+    color: #EACFA3;
+    padding: 0px 5px;
+    margin-top: 5px;
+    border: 1px dashed #EACFA3;
+}
+
+/*.dq-city {*/
+/*text-align: justify;*/
+/*}*/
+.qy-bottom {
+    width: 95%;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+
+.qy-edit-btn,
+.offer-edit-btn {
+    display: inline-block;
+    float: right;
+    color: #fff;
+    background: #E61B1B;
+    font-size: 14px;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 4px !important;
+}
+
+/*-------权益区域编辑弹框样式------------*/
+.main-content {
+    position: relative;
+}
+
+.edit-form-main {
+    position: fixed;
+    top: 22%;
+    background: #fff;
+    width: 440px;
+    z-index: 10050 !important;
+    left: 33%;
+    border-top: 2px solid #DA3C0A;
+
+}
+
+.edit-form-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 10049 !important;
+    opacity: 0.6;
+}
+
+.base-loading .edit-form-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 10300 !important;
+    opacity: 0.6;
+}
+
+.base-loading .edit-form-main {
+    position: fixed;
+    top: 20%;
+    background: #fff;
+    width: 440px;
+    z-index: 10300 !important;
+    left: 33%;
+    border-top: 2px solid #DA3C0A;
+}
+
+.edit-form-top {
+    font-size: 18px;
+    color: #3C3C3C;
+    padding: 15px 20px;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.edit-form-bottom {
+    padding: 20px;
+}
+
+.edit-form-ul {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.edit-form-ul > li {
+    font-size: 12px;
+    color: #3C3C3C;
+    margin-top: 20px;
+}
+
+.edit-form-ul > li > span {
+    /* padding: 0 5px; */
+    width: 25%;
+    text-align: right;
+    display: inline-block;
+    font-size: 12px;
+    color: #3C3C3C;
+    margin-right: 20px;
+}
+
+.edit-form-span > li > span {
+    width: 18%;
+}
+
+.edit-form-ul > li > span em {
+    font-size: 12px;
+    color: red;
+}
+
+.edit-check {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.edit-select {
+    width: 260px;
+    height: 24px;
+    border: 1px solid #B9B9B9;
+    font-size: 12px;
+    color: #3C3C3C;
+}
+
+.sure-btn {
+    width: 80px;
+    height: 20px;
+    background: #EFB034;
+    border: none;
+    outline: none;
+    transform: none;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.qx-btn {
+    width: 80px;
+    height: 20px;
+    background: #B9B9B9;
+    border: none;
+    outline: none;
+    transform: none;
+    font-size: 12px;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+/*-------权益区域编辑弹框样式end------------*/
+
+/*------offeredit编辑页面（权益区域的样式修改）end------*/
+/*手机横屏时*/
+@media (max-width: 767px) {
+    ul.page-sidebar-menu > li a i {
+        display: none;
+    }
+
+    .page-sidebar.side-nav {
+        display: block;
+        position: fixed;
+        width: 50%;
+        top: 18px;
+        left: -50%;
+        margin: 0;
+        z-index: 9;
+        overflow-y: auto;
+        height: 109% !important;
+    }
+
+    .page-sidebar.side-nav.on-side {
+        left: 0;
+    }
+
+    .page-sidebar {
+        display: none;
+    }
+
+    .mtr-top {
+        display: none;
+    }
+
+    /*.page-sidebar ul {*/
+    /*width: 50%;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*}*/
+    /*.page-sidebar{*/
+    /*height:20px;*/
+    /*}*/
+    .sidebar-toggler {
+        background-image: url(../image/ic_menu.png);
+        background-color: #242424;
+        height: 20px;
+        width: 20px;
+    }
+
+    .hidden-phone {
+        width: 20px;
+        background: #E61B1B !important;
+        /*display: inline-block;*/
+        /*margin-left: 30px;*/
+        position: fixed;
+        top: 15px;
+        padding: 6px;
+        display: block !important;
+    }
+
+    .main-content {
+        margin-top: 61px;
+    }
+
+    .header .brand {
+        margin-left: 42px !important;
+        margin-top: 19px;
+    }
+
+    .vip-head .vip-head-left {
+        display: none;
+    }
+
+    .vip-head .vip-head-month {
+        float: left;
+        overflow: hidden;
+        height: 30px;
+        margin-left: 23px !important;
+        margin-right: 0px !important;
+    }
+
+    .vip-head .vip-head-right {
+        float: left;
+        height: 30px;
+        padding-left: 0 !important;
+        line-height: 36px;
+
+    }
+
+    .vip-time .vip-time-block {
+        margin-right: 0 !important;
+        margin-left: 28px !important;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .login .content {
+        padding: 20px !important;
+        width: 305px !important;
+    }
+}

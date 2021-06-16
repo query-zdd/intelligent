@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <audio id="success" src="/upload/sucai/success.mp3"></audio>
+ <audio id="fail" src="/upload/sucai/fail.mp3"></audio>
+</body>
+var audio1 = document.getElementById("fail");
+    audio1.play();
+    audio1.addEventListener('ended', function () {
+         window.top.location.href=url;
+    }, false);
+</html>

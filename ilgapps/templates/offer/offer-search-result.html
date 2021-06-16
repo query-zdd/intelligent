@@ -1,0 +1,530 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block pagecsslink %}
+
+    <link rel="stylesheet" href="{% static  "css/offerContent.css" %}">
+
+{% endblock %}
+
+{% block mtr-top-last %}
+    <li class="mtr-top-last"><span>万事达卡权益管理</span>><span>权益搜索</span></li>
+{% endblock %}
+
+{% block mainContent %}
+    <input type="hidden" value="{{ searchlist }}" id="offer-id-list">
+    <div class="main-content">
+        <h2 class="offCon-title">权益搜索 - {{ searchWord }}</h2>
+
+        {#        <div class="offCon-main">#}
+        {#            <ul class="offCon-search-list">#}
+        {#                <li>#}
+        {#                    <p>分类</p>#}
+        {#                    <select page-custom="category" class="offCon-select" name="">#}
+        {#                        <option value="0">全部</option>#}
+        {#                        {% for cat in categeryObj %}#}
+        {#                            <option value="{{ cat.cat_id }}">{{ cat.cat_name }}</option>#}
+        {#                        {% endfor %}#}
+        {##}
+        {#                    </select>#}
+        {#                </li>#}
+        {#                <li>#}
+        {#                    <p>地区</p>#}
+        {#                    <select page-custom="district" class="offCon-select" name="">#}
+        {#                        <option value="0">全部</option>#}
+        {#                        {% for chau in chauObj %}#}
+        {#                            <option value="{{ chau.id }}">{{ chau.chau_name }}</option>#}
+        {#                        {% endfor %}#}
+        {#                    </select>#}
+        {#                </li>#}
+        {#                <li>#}
+        {#                    <p>卡别</p>#}
+        {#                    <select page-custom="card" class="offCon-select" name="">#}
+        {#                        <option value="0">全部</option>#}
+        {#                        {% for card in cardObj %}#}
+        {#                            <option value="{{ card.card_id }}">{{ card.chn }}</option>#}
+        {#                        {% endfor %}#}
+        {##}
+        {#                    </select>#}
+        {#                </li>#}
+        {#                <li>#}
+        {#                    <p>权益状态</p>#}
+        {#                    <select page-custom="status" class="offCon-select" name="">#}
+        {#                        <option value="">全部</option>#}
+        {#                        <option value="1">有效</option>#}
+        {#                        <option value="0">已过期</option>#}
+        {#                    </select>#}
+        {#                </li>#}
+        {#                <li class="search-data">#}
+        {#                    <p>有效期</p>#}
+        {#                    <input class="search-input-date" type="date" name="" id="time_start" value=""/><em#}
+        {#                        style="margin:0 10px;">-</em><input class="search-input-date" type="date" name="" id="time_end"#}
+        {#                                                            value=""/>#}
+        {#                    <div class="outer clearfix">#}
+        {#                        <div class="date date1 fl" id="time_start">#}
+        {#                            <input type="text" class="date-check"/>#}
+        {#                        </div>#}
+        {#                        &nbsp;#}
+        {#                        <em>-</em>#}
+        {#                         &nbsp;#}
+        {#                        <div class="date fr"  id="time_end">#}
+        {#                            <input type="text" class="date-check"/>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                    <button class="search-btn" style="margin-left:20px;">搜索</button>#}
+        {#                </li>#}
+        {##}
+        {#            </ul>#}
+        {#            <p class="search-bottom">买一送一|亚洲</p>#}
+        {#            <div class="search-add-box">#}
+        {#                <div class="search-box">#}
+        {#                    <input type="" name="" id="keyword" value="" placeholder="搜索"/>#}
+        {#                    <button id="kw_search">搜索</button>#}
+        {#                </div>#}
+        {#                <div class="search-result">#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
+
+        <div class="offCon-main">
+            <h2 class="offCon-title">权益列表&nbsp;&nbsp;<span style="font-size: 12px;font-weight: normal">提示：按匹配度显示前40条权益</span></h2>
+
+            <div class="offCon-list-top" style="overflow: inherit;padding-bottom:15px;">
+                <div class="offCon-list-top-left">
+                    <span>每页显示</span>
+                    <select page-custom="step" class="offCon-select" name="" style="width:48px;margin:0 10px;">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+								<span>
+									条记录
+								</span>
+                </div>
+
+                <div class="offCon-list-top-right">
+                    {% block strick-top  %}
+                    <div  style="display:inline-block;position:relative;">
+                    <button class="offCon-list-btn offer-stickontop" style="background: #008000;">勾选置顶</button>
+                    </div>
+                    {% endblock %}
+
+                    <div class="dropmenu" style="display:inline-block;position:relative;">
+                        <button class="offCon-list-btn offer-shcedule" style="background: #008000;">添加至日历</button>
+                        <ul class="drop-down">
+                            <li class="check-ex">勾选添加</li>
+                            <li class="total-ex">全部添加</li>
+                        </ul>
+                    </div>
+                    <div class="dropmenu" style="display:inline-block;position:relative;">
+                        <button class="offCon-list-btn offer-excel">批量权益excel导出</button>
+                        <ul class="drop-down">
+                            <li class="check-ex">勾选导出</li>
+                            <li class="total-ex">全部导出</li>
+                        </ul>
+                    </div>
+{#                    <button class="offCon-list-btn off-qyeop-btn">批量权益发送EOP/CQ5</button>#}
+                    <div class="dropmenu" style="display:inline-block;position:relative;">
+                        <button class="offCon-list-btn off-qypl-btn">权益批量导出 (jpg/pdf/html)</button>
+                        <ul class="drop-down">
+                            <li class="check-ex">勾选导出</li>
+                            <li class="total-ex">全部导出</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="offCon-table">
+                {% block table %}
+                    <table class="off-table-list" border="" cellspacing="" cellpadding="">
+                        <thead>
+                        <tr>
+                            <th width="5%">
+                                <div class="checker" id="check-all"><span class=""><input type="checkbox" name="a"
+                                                                                          value=""></span>
+                                </div>
+
+                            </th>
+                            <th width="10%">权益序号</th>
+{#                            <th>权益编号</th>#}
+                            <th width="12%">权益名称</th>
+{#                            <th>权益优惠标题</th>#}
+                            <th width="10%">权益分类</th>
+                            <th width="10%">权益地区</th>
+                            <th width="10%">使用卡种</th>
+                            <th width="10%">有效期</th>
+                            <th width="10%">权益状态</th>
+                            <th width="10%">关键词</th>
+                            <th width="10%"> 操作</th>
+{#                            <th></th>#}
+{#                            <th></th>#}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for record in paginator.object_list %}
+                            <tr>
+                                <td>
+                                    <div class="checker"><span class=""><input type="checkbox" name="b"
+                                                                               value="{{ record.offer_id }}"></span>
+                                    </div>
+                                </td>
+                                {#                            <td>{{ record.offer_id }}</td>#}
+                                <td>{{ record.offer_sn }}</td>
+{#                                <td>{{ record.offer_name }}</td>#}
+                                <td><a href="/offer/offerExportShow/?id={{ record.offer_id }}">{{ record.benefit_name }}</a></td>
+                                <td>{{ record.cat_name | safe }}</td>
+                                <td>{{ record.district|safe }}</td>
+                                  <td class="off-table-list-twline-td" style="position: relative;">
+                                    <div  class="off-table-list-twline" >
+                                    {{ record.card_type|safe }}
+
+                                    </div>
+                                    {% if record.card_type %}
+                                        <div class="off-table-tank">
+                                            <span class="dot-bottom"></span>
+                                                {{ record.card_type|safe }}
+                                        </div>
+                                    {% endif %}
+
+                                </td>
+                                <td>{{ record.expire}}</td>
+                                <td>{{ record.status }}</td>
+                                 <td class="off-table-list-twline-td" style="position: relative;" >
+
+                                    <div  class="off-table-list-twline">
+                                    {{ record.keywords | safe }}
+                                   </div>
+                                    {% if record.keywords %}
+                                         <div class="off-table-tank">
+                                            <span class="dot-bottom"></span>
+                                               {{ record.keywords | safe }}
+                                        </div>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% ifequal record.checkmatch 0 %}
+                                        <button class="off-add" id="a{{ record.offer_id }}"
+                                                onclick="schedule(this.id);">添加至日历
+                                        </button>
+                                    {% else %}
+                                        <button class="off-remove" id="r{{ record.offer_id }}"
+                                                onclick="schedule(this.id);">从日历移除
+                                        </button>
+                                    {% endifequal %}
+                                    {% ifequal record.is_strickontop 1 %}
+                                            <button class="off-remove" id="r{{ record.offer_id }}"
+                                                    onclick="strickOntop(this.id);">
+                                                取消置顶
+                                            </button>
+                                        {% else %}
+                                            <button class="off-add" id="{{ record.offer_id }}"
+                                                    onclick="strickOntop(this.id);">
+                                                置顶
+                                            </button>
+                                    {% endifequal %}
+                                    <button class="off-out" tag="{{ record.offer_id }}">导出</button>
+                                    <button class="off-see" tag="{{ record.offer_id }}">查看</button>
+                                    {% if record.geography %}
+                                        {% if record.geography != ';'%}
+                                            <button class="off-loc" tag="{{ record.geography }}">位置</button>
+                                        {% endif %}
+                                    {% endif %}
+
+                                </td>
+{#                                <td>#}
+{#                                    <button class="off-out" tag="{{ record.offer_id }}">导出</button>#}
+{##}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <button class="off-see" tag="{{ record.offer_id }}">查看</button>#}
+{#                                </td>#}
+                            </tr>
+                        {% endfor %}
+
+
+                        </tbody>
+
+                    </table>
+                {% endblock %}
+            </div>
+
+        </div>
+
+        <!--权益发送EOP/CQ5样式-->
+        <div class="edit-form qy-eop" style="display:none;">
+            <div class="edit-form-bg">
+
+            </div>
+            <div class="edit-form-main">
+                <div class="edit-form-top">
+                    权益发送EOP/CQ5
+                </div>
+                <div class="edit-form-bottom">
+                    <ul class="edit-form-ul">
+                        <li><span>指派给<em>*</em></span>
+
+                            <div class="edit-check">
+                                EOP
+                                <div class="checker"><span class=""><input type="checkbox" value=""></span></div>
+                                <br/>
+                                CQ5
+                                <div class="checker"><span class=""><input type="checkbox" value=""></span></div>
+                            </div>
+                        </li>
+                        <li><span>Offer列表:</span>意大利Jamie's</li>
+                        <li><span>操作类型:</span>
+                            <select name="" class="edit-select">
+                                <option value="">上线</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <p style="text-align: right;padding:30px 0;">
+                        <button class="sure-btn">确认</button>
+                        <button class="qx-btn">取消</button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!--权益发送EOP/CQ5样式end-->
+        <!--权益批量导出(JPG/PDF/HTML)-->
+        <div class="edit-form qy-pl" style="display:none;">
+            <div class="edit-form-bg">
+
+            </div>
+            <div class="edit-form-main">
+                <div class="edit-form-top">
+                    权益批量导出(JPG/PDF/HTML)
+                </div>
+                <div class="edit-form-bottom">
+                    <ul class="edit-form-ul edit-form-span">
+                        <li><span>版本:</span>
+                            <select name="version" class="edit-select">
+                                <option value="2016">2017版</option>
+{#                                <option value="2016">2017版</option>#}
+                            </select>
+                        </li>
+                        <li><span>语言:</span>
+                            <select name="lang" class="edit-select">
+                                <option value="sc">简体</option>
+                                <option value="tc">繁體</option>
+                            </select>
+                        </li>
+                        <li><span>格式:</span>
+                            <select name="type" class="edit-select">
+                                <option value="pdf">PDF</option>
+                                <option value="jpg">JPG</option>
+                                <option value="html">HTML</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <p style="text-align: right;padding:30px 0;">
+                        <button id="formExportConfirm" class="sure-btn">确认</button>
+                        <button class="qx-btn">取消</button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!--权益批量导出(JPG/PDF/HTML)end-->
+
+        <div class="page-change-box">
+            {% if paginator.paginator.num_pages != 1 %}
+                <div class="page-turning" style="margin-left:420px;">
+                    <ul min="1" max="{{ paginator.paginator.num_pages }}">
+                        <li><i class="icon-step-backward"></i></li>
+                        {% if paginator.has_previous %}
+                            <li><i class="icon-caret-left" to="{{ paginator.previous_page_number }}"></i></li>
+                        {% endif %}
+                        {% for p in page_num_list %}
+                            {% if p.1 %}
+                                <li class="active">{{ p.0 }}</li>
+                            {% else %}
+                                <li class="inactive">{{ p.0 }}</li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if paginator.has_next %}
+                            <li><i class="icon-caret-right" to="{{ paginator.next_page_number }}"></i></li>
+                        {% endif %}
+                        <li><i class=" icon-step-forward"></i></li>
+
+                    </ul>
+                </div>
+                <div class="page-jump">
+                    <span>跳转到</span>
+                    <input id="to_page" placeholder="请输入">
+                    <button id="page_jump">确定</button>
+                </div>
+            {% endif %}
+            <div class="copy-right">
+                {{ min_item }}-{{ max_item }}条,共{{ paginator.paginator.count }}条
+            </div>
+        </div>
+    </div>
+
+    <div class="dao-content">
+        <div class="daoCon-title">
+            <span>权益预览 </span>
+
+            <div class="daoCon-title-right">
+{#                <span style="font-size:14px;color: #8C8C8C;display: inline-block;vertical-align: top;">版本选择:</span>#}
+                <ul class="daoCon-title-ul">
+
+                    <li class="daoCon-on" name="daoCon2016">2017版</li>
+{#                    <li name="daoCon2017">2017版</li>#}
+                </ul>
+            </div>
+        </div>
+        <div class="daoCon-all">
+            <div class="daoCon-main daoCon2016">
+                {#                <img src="{% static "image/page.jpg" %}"/>#}
+                <iframe id="export_html_1" style="width: 100%;height: 100%;"></iframe>
+            </div>
+            <div class="daoCon-main daoCon2017" style="display: none;">
+                <select id="card_sel">
+                    <option value="1">普卡</option>
+                    <option value="2">金卡</option>
+                    <option value="3">钛金卡</option>
+                    <option value="4">白金卡</option>
+                    <option value="5">世界卡</option>
+                    <option value="6">世界之极卡</option>
+                    <option value="7">商务卡</option>
+                    <option value="8">商务卡企业</option>
+                    <option value="9">钛金商务卡</option>
+                </select>
+                <iframe id="export_html_2" style="width: 100%;height: 100%;"></iframe>
+            </div>
+        </div>
+
+
+        <div class="daoCon-bottom">
+            <div class="daoCon-bottom-left">
+                <button class="daoCon-btn" id="export_html">导出HTML包</button>
+                <button class="daoCon-btn" id="export_pdf">导出PDF包</button>
+                <button class="daoCon-btn" id="export_jpg">导出JPG包</button>
+                <button class="daoCon-btn" id="export_word">导出Word</button>
+            </div>
+            <button class="daoCon-btn daoCon-qx">取消</button>
+        </div>
+    </div>
+    <input id="numberlist" value="{{ searchlist }}" style="display: none">
+{% endblock %}
+
+
+
+
+
+
+{% block pagescript %}
+    <script src="{% static "js/page-custom.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offeredit/jquery.form.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offeredit/upload.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offeredit/offer_edit.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/offer_schedule.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/double-date.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/export.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/app.js" %}" type="text/javascript"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q40PGOwppIjSf90uD31Y2GPTM2Gcan3y"></script>
+    <script>
+        jQuery(document).ready(function () {
+
+            App.init(); // initlayout and core plugins
+
+
+        });
+    </script>
+     <script>
+      $(".off-table-list-twline-td").hover(function () {
+            $(this).children(".off-table-tank").show();
+        }, function () {
+
+            $(this).children(".off-table-tank").hide();
+        });
+    </script>
+    <script type="text/javascript">
+        $(".checker").on("click", function () {
+//				    $(this).children("span").hasClass("checked")? $(this).children("span").removeClass("checked"):$(this).children("span").addClass("checked");
+            //或者这么写
+            // $(this).toggleClass( "on_check" );
+            if ($(this).children('span').hasClass("checked")) {
+                $(this).children('span').removeClass("checked");
+                $(this).children('span').children("input").attr("checked", false);
+
+
+            } else {
+                $(this).children('span').addClass("checked");
+                $(this).children('span').children("input").attr("checked", true);
+
+
+            }
+
+
+        })
+        $("input[name='a']").on("click", function () {
+            //判断当前点击的复选框处于什么状态$(this).is(":checked") 返回的是布尔类型
+            if ($(this).is(":checked")) {
+
+                $("input[name='b']").attr("checked", true);
+                $("input[name='b']").parent('span').addClass("checked");
+//
+            } else {
+                $("input[name='b']").parent('span').removeClass("checked");
+                $("input[name='b']").attr("checked", false);
+            }
+
+
+        });
+
+
+        $(".off-qyeop-btn").on("click", function () {
+            $(".qy-eop").show();
+            $(".edit-form-bg,.sure-btn,.qx-btn").on("click", function () {
+                $(".qy-eop").hide();
+            })
+        })
+        {#        $(".off-qypl-btn").on("click", function () {#}
+        {#            $(".qy-pl").show();#}
+        {#            $(".edit-form-bg,.sure-btn,.qx-btn").on("click", function () {#}
+        {#                $(".qy-pl").hide();#}
+        {#            })#}
+        {#        })#}
+        {#        $(".off-out").on("click", function () {#}
+        {#            $(".dao-content").show();#}
+        {#            $(".main-content").hide();#}
+        {#            $(".daoCon-qx").on("click", function () {#}
+        {#                $(".dao-content").hide();#}
+        {#                $(".main-content").show();#}
+        {#            })#}
+        {#        })#}
+        $(".daoCon-title-ul>li").on("click", function () {
+            $(this).addClass("daoCon-on");
+            $(this).siblings("li").removeClass("daoCon-on");
+            var target = $(this).attr('name');
+            $("." + target).show();
+            $("." + target).siblings('.daoCon-main').hide();
+        })
+        $(".search-add-box .search-box input").focus(function () {
+            $(this).addClass('focus');
+            $(this).attr("placeholder", "");
+        })
+        $(".search-add-box .search-box input").blur(function () {
+            if ($(this).val() == '') {
+                $(this).removeClass('focus');
+                $(this).attr("placeholder", "搜索");
+            }
+        })
+        $(".search-del").on("click", function () {
+            $(this).parent().hide();
+
+        })
+
+        $("#OfferSearch").addClass("ch-active");
+        $("#OfferSearch").parent("ul.sub-menu").css("display", "block");
+        $("#OfferSearch").parent("ul.sub-menu").parent("li").addClass("open");
+        $("#OfferConManage").parent("ul.sub-menu").parent("li").find(".arrow").addClass("open");
+    </script>
+{% endblock %}
+

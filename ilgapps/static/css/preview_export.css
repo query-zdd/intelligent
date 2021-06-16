@@ -1,0 +1,166 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family:Calibri;
+    src: url('../fonts/calibri.ttf');
+}
+
+@font-face {
+    font-family:SimHei;
+    src: url('../fonts/simhei.ttf');
+}
+
+#preview {
+    width: 1200px;
+    margin: auto;
+}
+
+img {
+    margin: 0;
+    display: block;
+}
+
+#preview .header {
+    height: 52px;
+    width: 100%;
+    background-color: #e99420;
+}
+
+#preview .logo {
+    display: block;
+    height: 52px;
+    line-height: 52px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#preview .content-left {
+    width: 66%;
+    float: left;
+}
+
+#preview .content-right {
+    width: 33%;
+    float: right;
+}
+
+#preview .preview-logo {
+    width: 40%;
+    margin: auto;
+}
+
+#preview .preview-logo img {
+    margin: 20px 0 30px 0;
+}
+
+#preview .content-right p {
+    text-align: left;
+    margin-left: 35px;
+    word-wrap: break-word;
+    padding-right: 40px;
+    overflow: hidden;
+}
+
+#preview .preview-card {
+    border-top: 1px solid #000;
+
+}
+
+#preview .preview-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+#preview .preview-card ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+#preview .preview-card ul li {
+    width: 33%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+#preview .preview-card ul li img {
+    width: 80%;
+    height: 55px;
+    display: block;
+    margin: auto;
+}
+
+#preview .preview-card ul li p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#preview .contact-box {
+}
+
+#preview .contact-title {
+    height: 52px;
+    width: 100%;
+    background-color: #e99420;
+    margin-bottom: 25px;
+
+}
+
+#preview .contact-title span {
+    display: block;
+    height: 52px;
+    line-height: 52px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#preview .content-bottom .content-left {
+    padding-top: 50px;
+    background-color: #e1e3e2;
+    padding-bottom: 50px;
+    position: relative;
+
+}
+
+#preview .content-top {
+    overflow: hidden;
+}
+
+#preview .position {
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+#preview .content-bottom .content-left p {
+    padding: 0 50px;
+    font-size: 16px;
+    word-spacing: 2px;
+}
+
+#preview .content-bottom .content-left h3 {
+    padding: 0 50px;
+    font-size: 18px;
+    word-spacing: 2px;
+    color: #ad7b48;
+    font-weight: bold;
+}
+
+#preview .pre-mtr-logo {
+    /*position: absolute;*/
+    /*right: 35px;*/
+    /*bottom: 25px;*/
+    /*width: 120px;*/
+}
+
+#preview .pre-mtr-logo img {
+    width: 100%;
+}

@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block body %}
+
+    {% load static %}
+
+    <body class="login">
+
+    <div class="logo">
+        <img style="width:50%;" src="{% static "image/logo_img.png" %}" alt=""/>
+    </div>
+
+
+    <div class="content">
+
+        <!-- 登录 FORM -->
+
+        <form class="form-vertical login-form" action="/admin/" method="post" enctype="multipart/form-data"
+              style="overflow: hidden">
+            <input type="hidden" id="srcurl" value="{{ srcurl }}" name="srcurl"> {% csrf_token %}
+            <h4 class="form-title">食品智能计算平台</h4>
+
+            <div class="alert alert-error {{ showError }}">
+                <span>输入的登录帐号与密码不正确！</span>
+            </div>
+
+            <div class="control-group username">
+
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+
+                <label class="control-label visible-ie8 visible-ie9">登录账号:</label>
+
+                <div class="controls">
+
+                    <div class="input-box">
+                        <span></span>
+                        <input id="username" class="m-wrap placeholder-no-fix" type="text" placeholder="登录帐号"
+                               name="username"/>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="control-group password">
+
+                <label class="control-label visible-ie8 visible-ie9">密码:</label>
+
+                <div class="controls">
+
+                    <div class="input-box">
+                        <span></span>
+                        <input id="psw" class="m-wrap placeholder-no-fix" type="password" placeholder="密码"
+                               name="password"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+                <button id="submit" type="submit" class="">
+
+                    登陆
+
+                </button>
+                <br>
+                <label class="checkbox" style="margin-right: 144px;">
+                    <span>
+                        <input id="remember" type="checkbox" name="remember"/>
+                    </span> 记住帐号
+                </label>
+                <label>
+                    <a class="forget-password" href="/forgotpass/" style="color: #000">忘记密码？</a>
+                </label>
+
+
+            </div>
+
+
+        </form>
+
+        <!-- END 登录 FORM -->
+
+
+    </div>
+
+
+    <div class="copyright">
+        <br>
+        <a target="_blank" href="http://www.miitbeian.gov.cn">中国科学院计算技术研究所</a>@苏州智能计算产业技术研究院
+
+
+    </div>
+
+
+    <script src="{% static "js/jquery-1.10.1.min.js" %}" type="text/javascript"></script>
+
+
+    <script>
+
+        $(".checkbox span").on("click", function () {
+            if ($(this).hasClass("checked")) {
+                $(this).removeClass("checked");
+                $(this).children("input").attr("checked", false);
+            } else {
+                $(this).addClass("checked");
+                $(this).children("input").attr("checked", true);
+            }
+        });
+
+        $(".input-box input").focus(function () {
+            $(this).parent(".input-box").css("border", "2px solid #EFB034")
+        })
+        $(".input-box input").blur(function () {
+            $(this).parent(".input-box").css("border", "2px solid #D6D6D6")
+        })
+        function setCookie(name, value) {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        }
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+                return unescape(arr[2]);
+            else
+                return null;
+        }
+        $('#submit').click(function (e) {
+            if ($('#remember').attr('checked')){
+                setCookie("username", $('#username').val());
+                setCookie("psw", $('#psw').val())
+            }else{
+                clearCookie('username');
+                clearCookie('psw');
+            }
+            $('form').submit();
+        });
+        if (getCookie("username")) {
+            $('#username').val(getCookie("username"));
+            $('#psw').val(getCookie("psw"));
+            $('#remember').attr('checked', 'checked').parent().addClass('checked');
+        }
+        function clearCookie(name) {
+            setCookie(name, "", -1);
+        }
+
+
+    </script>
+    </body>
+
+{% endblock %}
+</html>

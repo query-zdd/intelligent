@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block body %}
+
+    {% load static %}
+
+    <body class="login">
+
+    <div class="logo">
+        <img style="width:100%;" src="{% static "image/loginpage_logo.png" %}" alt=""/>
+    </div>
+
+
+    <div class="content">
+
+        <!-- 忘记密码 -->
+        <div class="form-vertical forget-form" >
+
+            <h4 class="form-title">万事达卡权益管理平台</h4>
+            <div class="control-group forget">
+
+                <label class="control-label visible-ie8 visible-ie9">输入邮箱:</label>
+
+                <div class="controls">
+
+                    <div class="input-box">
+                        <span><i class="icon-envelope"></i></span>
+                        <input class="m-wrap placeholder-no-fix" placeholder="输入邮箱" id="email"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+
+                <a type="button" id="back-btn" href="/admin/">
+
+                    返回
+
+                </a>
+
+                <button class="btn green" style="margin-left: 50px" id="forgetpass">发送邮件</button>
+                <button class="btn disabled" disabled style="margin-left: 50px;background: #e5e5e5;color:#fff;">发送邮件</button>
+
+            </div>
+
+        </div>
+        <!-- END 忘记密码 FORM -->
+
+
+    </div>
+
+
+     <div class="copyright">
+
+        2016-2017 &copy;Mastercard.
+        <br>
+        <a target="_blank" href="http://www.miitbeian.gov.cn">沪ICP备16033141号</a> 上海美士达商务咨询有限公司
+
+
+    </div>
+
+
+
+    {% block pagescript %}
+
+    <script src="{% static "js/jquery-1.10.1.min.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/forgetPassword.js" %}" type="text/javascript"></script>
+
+    <script>
+
+        $(".checkbox span").on("click", function () {
+            if ($(this).hasClass("checked")) {
+                $(this).removeClass("checked");
+                $(this).children("input").attr("checked", false);
+            } else {
+                $(this).addClass("checked");
+                $(this).children("input").attr("checked", true);
+            }
+        })
+
+        $(".input-box input").focus(function () {
+            $(this).parent(".input-box").css("border", "2px solid #EFB034")
+        })
+        $(".input-box input").blur(function () {
+            $(this).parent(".input-box").css("border", "2px solid #D6D6D6")
+        })
+    </script>
+        {% endblock %}
+    </body>
+
+{% endblock %}
+</html>

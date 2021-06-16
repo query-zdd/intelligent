@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block pagecsslink %}
+
+    <link rel="stylesheet" href="{% static  "css/offerContent.css" %}">
+    <style>
+        .main-content{
+            overflow: hidden;
+            min-height: 84%;
+            position: relative
+        }
+
+        .box {
+				    width: 600px;
+                    min-height: 50px;
+                    margin: auto;
+                    box-sizing: border-box;
+                    position: relative;
+                    line-height: 50px;
+                    border: 3px dashed gainsboro;
+                    text-align: center;
+                    background: #ebece2;
+                    float: left;
+			}
+
+			.Original_img {
+				width: 600px;
+				min-height: 300px;
+			}
+
+			#sel_file {
+				width: 600px;
+				min-height: 300px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 2;
+				opacity: 0;
+			}
+			h2{
+				text-align: center;
+			}
+            .btn_in{
+                    float: left;
+                display: block;
+                width: 100px;
+                height: 58px;
+                border: 1px solid #807171;
+                text-align: center;
+                line-height: 50px;
+                background: #EFB034;
+                margin-left: 10px;
+            }
+    </style>
+
+{% endblock %}
+
+{% block mtr-top-last %}
+    <li class="mtr-top-last"><span>智能图片分析管理</span>><span>演示区</span></li>
+{% endblock %}
+
+{% block mainContent %}
+    <div class="main-content">
+
+
+        <div class="search-box" style="overflow: hidden;">
+
+            <div class="search" style="overflow: hidden">
+                 <form id="form_sample" action="goods/api/fileupload/" method="post"
+                      enctype="multipart/form-data"
+                      style="  float: left;
+                                margin-left: 20%;
+                                margin-top: 10%;
+                                overflow: hidden;">
+                    {% csrf_token %}
+                    <div class="box">
+                        <a class="img_title">点击或者拖拽上传</a>
+                        <img style="display: none" src="" alt="" class="Original_img"  />
+                        <input type="file" id="sel_file" name="file" />
+                    </div>
+                     <button type="submit" id="btn-upload1"  class="btn_in">智能识图</button>
+
+                </form>
+            </div>
+            <div class="key-word">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+{% block pagescript %}
+
+     <script src="{% static "js/offeredit/jquery.form.js" %}" type="text/javascript"></script>
+     <script src="{% static "js/app.js" %}" type="text/javascript"></script>
+    <script>
+
+        jQuery(document).ready(function () {
+
+            App.init(); // initlayout and core plugins
+
+        });
+        $("#offer-search").addClass("ch-active");
+        $("#offer-search").addClass("ch-active");
+        $("#offer-search").parent("ul.sub-menu").css("display", "block");
+        $("#offer-search").parent("ul.sub-menu").parent("li").addClass("open");
+        $("#offer-search").parent("ul.sub-menu").parent("li").find(".arrow").addClass("open");
+
+    </script>
+    <script>
+        var sel_file = document.querySelector("#sel_file");
+        var img_title = document.querySelector(".img_title");
+		var Original_img = document.querySelector(".Original_img");
+		sel_file.onchange = function(e) {
+			var newimg = e.target.files[0];
+			upimg(newimg);
+		}
+		//拖拽上传
+		var imgbox = document.querySelector(".box");
+		//拖拽元素在在放置区域移动
+		imgbox.ondragover = function() {
+			return false;
+		}
+		imgbox.ondrop = function(e) {
+			upimg(e.dataTransfer.files[0])
+			return false;
+		}
+		//封装函数
+		function upimg(newimg) {
+			//实例化文件对象(构造函数)
+			var fileReader = new FileReader();
+			fileReader.readAsDataURL(newimg)
+			fileReader.onload = function(e) {
+				//把加号替换成上传图片的路径
+				Original_img.src = e.target.result;
+				Original_img.style.width = "600px";
+				Original_img.style.display = "block";
+                img_title.style.display = "none";
+			}
+		}
+		$("#form_sample").submit(function () {
+            var params = $("#form_sample").formToArray();
+            params.push({name: "flag", required: false, type: "text", value: 1});
+            $("#form_sample").ajaxSubmit({
+                "url": "/offer/api/fileUploadOfferImg/",
+                "data": params,
+                "type": 'post',
+                "dataType": 'json',
+                "beforeSend": function () {
+                    $("#over").show();
+                    $("#layout").show();
+                },
+                "success": function (data) {
+                    if (data.ret == 0) {
+                        var url = '/offer/showOfferOne/?id=' +data.message;
+                        window.location.href = url;
+                    }
+                },
+                "error": function (xhr, status, error) {
+                    alert("系统繁忙：" + error);
+                    $("#over").hide();
+                    $("#layout").hide();
+                },
+                resetForm: true,
+                clearForm: true
+
+            });
+            return false;
+        });
+    </script>
+{% endblock %}
+
