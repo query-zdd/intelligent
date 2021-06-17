@@ -22,9 +22,10 @@ DATABASES = {
         'NAME': 'ilg2020',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': "admin123",      # 'HOST': '121.199.4.22',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        # 'HOST': '121.5.213.241',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'HOST':'127.0.0.1',
+        # 'PASSWORD': "admin123",      # 'HOST': '121.199.4.22',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PASSWORD': "Zkx191030",
+        'HOST': '39.99.188.227',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        # 'HOST':'127.0.0.1',
         'PORT': '3306',  # Set to empty string for default.
 
     }
