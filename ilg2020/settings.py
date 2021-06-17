@@ -15,7 +15,7 @@ SECRET_KEY = 'x!m)-p#=*!c%l5t*^cnawyzdb=28vdtjj&5mbq%#tt*$q8a)pf'
 DEBUG = True
 
 DOMAIN_URL = 'http://127.0.0.1:8000/'
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','39.99.188.227']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
