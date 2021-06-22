@@ -13,7 +13,6 @@ MEDIA_URL = '/upload/'
 SECRET_KEY = 'x!m)-p#=*!c%l5t*^cnawyzdb=28vdtjj&5mbq%#tt*$q8a)pf'
 
 DEBUG = True
-
 DOMAIN_URL = 'http://39.99.188.227/'
 ALLOWED_HOSTS = ['127.0.0.1','39.99.188.227']
 DATABASES = {
