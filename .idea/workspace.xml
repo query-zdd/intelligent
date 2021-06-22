@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="747ac865-90cf-4895-8961-7511165ab459" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ilg2020/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ilg2020/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,7 +48,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilgapps/offer/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="352">
               <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="e#583#624#0" expanded="true" />
@@ -60,7 +60,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilgapps/offer/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11198">
+            <state relative-caret-position="11506">
               <caret line="523" selection-start-line="523" selection-end-line="523" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
@@ -81,8 +81,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ilg2020/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            <state relative-caret-position="330">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -235,16 +235,17 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="52" />
-    <option name="y" value="117" />
-    <option name="width" value="1637" />
-    <option name="height" value="941" />
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1853" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -274,11 +275,16 @@
               <item name="ilgapps" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="intelligent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intelligent" type="462c0819:PsiDirectoryNode" />
+              <item name="ilgapps" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -502,6 +508,14 @@
       <option name="presentableId" value="Default" />
       <updated>1616490787865</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;test&quot;">
+      <created>1624341646118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624341646118</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -515,7 +529,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32890365" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978166" weight="0.32852387" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32852387" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22308117" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2252899" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -536,6 +550,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;test&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;test&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -851,7 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ilgapps/offer/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="352">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
             <element signature="e#583#624#0" expanded="true" />
@@ -861,7 +879,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ilgapps/offer/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11198">
+        <state relative-caret-position="11506">
           <caret line="523" selection-start-line="523" selection-end-line="523" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
@@ -878,8 +896,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ilg2020/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        <state relative-caret-position="330">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
