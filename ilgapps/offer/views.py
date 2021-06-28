@@ -293,6 +293,19 @@ def goodsOperation(request):
             print(e)
     return HttpResponse(post_result)
 
+@csrf_exempt
+def queryGoods(request):
+    ll = 1
+    data = request.POST.get("flag")
+    print(data)
+    flag = 1
+    if flag==0:
+        goodsObj = Goods.objects.get(goods_id = id)
+    else:
+        goodsObj = Goods.objects.all()
+    post_result = "{\"msg\":" + json_encode(goodsObj) + "}"
+    return HttpResponse(post_result)
+
 def showMember(request):
     member=Person.objects.filter(is_del=0)
     page = request.GET.get('page',1)

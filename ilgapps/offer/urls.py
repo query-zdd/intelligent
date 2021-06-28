@@ -30,7 +30,7 @@ urlpatterns = [
      url(r'^showGoods/$', views.showGoods),
      url(r'^api/saveGoods/$', views.saveGoods),
      url(r'^api/goodsOperation/$', views.goodsOperation),
-     # url(r'^api/goodsOperation/$', views.goodsOperation),
+     url(r'^api/queryGoods/$', views.queryGoods),
      url(r'^showMember/$', views.showMember),
      url(r'^api/saveMember/$', views.saveMember),
      url(r'^api/memberOperation/$', views.memberOperation),
