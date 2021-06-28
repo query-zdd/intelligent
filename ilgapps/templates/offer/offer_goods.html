@@ -109,7 +109,7 @@
                             <tr>
                                 <td>{{ record.goods_sn }}</td>
                                 {% if record.goods_img %}
-                                    <td><img style='width:60px;' src='http://127.0.0.1:8000{{ record.goods_img }}'/></td>
+                                    <td><img style='width:60px;' src='{{ record.goods_img }}'/></td>
                                 {% else %}
                                     <td></td>
                                 {% endif %}
