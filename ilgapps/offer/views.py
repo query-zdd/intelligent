@@ -276,7 +276,10 @@ def goodsOperation(request):
     id = request.POST.get('id')
     operationCode=request.POST.get('operationcode')
     if operationCode=="query":
-        goodsObj = Goods.objects.get(goods_id = id)
+        if id:
+            goodsObj = Goods.objects.get(goods_id = id)
+        else:
+            goodsObj = Goods.objects.all()
         post_result = "{\"msg\":" + json_encode(goodsObj) + "}"
     else:
         try:
