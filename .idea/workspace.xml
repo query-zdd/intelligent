@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="747ac865-90cf-4895-8961-7511165ab459" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ilg2020/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ilg2020/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ilgapps/offer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ilgapps/offer/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ilgapps/offer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ilgapps/offer/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +50,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilgapps/offer/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="682">
               <caret line="32" column="47" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="47" />
               <folding>
                 <element signature="e#583#624#0" expanded="true" />
@@ -59,17 +59,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ilgapps/offer/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="297" column="10" lean-forward="true" selection-start-line="297" selection-start-column="10" selection-end-line="297" selection-end-column="10" />
+            <state relative-caret-position="181">
+              <caret line="297" column="29" selection-start-line="297" selection-start-column="22" selection-end-line="297" selection-end-column="29" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
                 <element signature="e#1310#5905#0" />
                 <element signature="e#5943#6301#0" />
                 <element signature="e#6345#7650#0" />
-                <element signature="e#8751#10113#0" />
               </folding>
             </state>
           </provider>
@@ -78,7 +77,7 @@
       <file leaf-file-name="offer_goods.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilgapps/templates/offer/offer_goods.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
+            <state relative-caret-position="6446">
               <caret line="293" column="41" selection-start-line="293" selection-start-column="41" selection-end-line="293" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -90,7 +89,7 @@
       <file leaf-file-name="offer_goods.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilgapps/static/js/offer_goods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="2222">
               <caret line="101" column="48" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="48" />
             </state>
           </provider>
@@ -99,17 +98,35 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilgapps/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="873">
+            <state relative-caret-position="448">
               <caret line="233" column="52" selection-start-line="233" selection-start-column="52" selection-end-line="233" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilg2020/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="209">
+              <caret line="106" column="12" lean-forward="true" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pydevd_resolver.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_resolver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="126" column="40" lean-forward="true" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ilgapps/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="76" column="12" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -117,20 +134,11 @@
       <file leaf-file-name="offer_goods_feature.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ilgapps/templates/offer/offer_goods_feature.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="112" column="52" lean-forward="true" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+            <state relative-caret-position="2464">
+              <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer_goods_feature.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ilgapps/static/js/offer_goods_feature.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1826">
-              <caret line="83" column="58" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -157,8 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fun_get_img</find>
-      <find>conf-thres</find>
       <find>orderPay</find>
       <find>code_img</find>
       <find>code</find>
@@ -187,6 +193,8 @@
       <find>showOrderStatistics</find>
       <find>showGoods</find>
       <find>showgoods</find>
+      <find>Banner</find>
+      <find>DEFAULT_AUTO_FIELD</find>
     </findStrings>
     <replaceStrings>
       <replace>$USER_HOME$</replace>
@@ -201,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ilgapps/SSD/Configs.py" />
         <option value="$PROJECT_DIR$/ilgapps/SSD/test/new_test.py" />
         <option value="$PROJECT_DIR$/ilgapps/alipay/Qrcode.py" />
         <option value="$PROJECT_DIR$/ilgapps/video-mode.py" />
@@ -250,8 +257,9 @@
         <option value="$PROJECT_DIR$/ilgapps/templates/base.html" />
         <option value="$PROJECT_DIR$/ilgapps/templates/offer/offer_goods.html" />
         <option value="$PROJECT_DIR$/ilgapps/offer/urls.py" />
-        <option value="$PROJECT_DIR$/ilgapps/offer/views.py" />
         <option value="$PROJECT_DIR$/ilg2020/settings.py" />
+        <option value="$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_resolver.py" />
+        <option value="$PROJECT_DIR$/ilgapps/offer/views.py" />
       </list>
     </option>
   </component>
@@ -275,7 +283,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,22 +300,11 @@
               <item name="intelligent" type="462c0819:PsiDirectoryNode" />
               <item name="ilgapps" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="intelligent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilgapps" type="462c0819:PsiDirectoryNode" />
-              <item name="offer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilgapps" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -469,7 +465,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="ilg2020.settings" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/py38/bin/python" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/env_zdd/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -549,17 +545,17 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021834" side_tool="true" weight="0.32890365" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978166" weight="0.32852387" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978166" weight="0.32852387" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32852387" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23191607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23854224" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39844617" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39844617" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -634,7 +630,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ilgapps/offer/views.py</url>
-          <line>529</line>
+          <line>527</line>
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -644,8 +640,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ilgapps/offer/views.py</url>
-          <line>275</line>
-          <option name="timeStamp" value="141" />
+          <line>297</line>
+          <option name="timeStamp" value="147" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -655,11 +651,31 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="145" />
+      <option name="time" value="148" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>request</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>json.loads(request.body)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.body</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.POST</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>str(settings.MEDIA_ROOT + &quot;temp/&quot; + uploadedFileName)</expression-string>
         <language-id>Python</language-id>
@@ -682,26 +698,6 @@
       </expression>
       <expression>
         <expression-string>OrderLine.objects.filter(order_id__in=ids).values(&quot;goods_name&quot;).annotate(c=Count(&quot;goods_name&quot;))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>OrderLine.objects.filter(order_id__in=ids).values(&quot;goods_name&quot;).annotate(c=Sum(&quot;goods_name&quot;))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>orderLine.aggregate(Max(&quot;c&quot;),Min(&quot;c&quot;)).values(&quot;goods_name&quot;,&quot;t&quot;)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>orderLine.annotate(t=Max(&quot;c&quot;)).values(&quot;goods_name&quot;,&quot;t&quot;)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>orderLine.annotate(t=Max(&quot;goods_name&quot;)).values(&quot;goods_name&quot;,&quot;t&quot;)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -760,7 +756,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ilgapps/yolov5/models/experimental.py" />
     <entry file="file://$PROJECT_DIR$/ilgapps/yolov5/models/hub/yolov3.yaml" />
     <entry file="file://$PROJECT_DIR$/ilgapps/yolov5/models/common.py" />
     <entry file="file://$USER_HOME$/anaconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/container.py" />
@@ -833,13 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ilgapps/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="152" column="21" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ilgapps/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
@@ -879,17 +867,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ilgapps/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="233" column="52" selection-start-line="233" selection-start-column="52" selection-end-line="233" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ilgapps/templates/offer/offer_goods_feature.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="112" column="52" lean-forward="true" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+        <state relative-caret-position="2464">
+          <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -901,7 +882,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ilgapps/templates/offer/offer_goods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
+        <state relative-caret-position="6446">
           <caret line="293" column="41" selection-start-line="293" selection-start-column="41" selection-end-line="293" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -911,14 +892,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ilgapps/static/js/offer_goods.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="2222">
           <caret line="101" column="48" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ilgapps/offer/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="682">
           <caret line="32" column="47" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="47" />
           <folding>
             <element signature="e#583#624#0" expanded="true" />
@@ -926,24 +907,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ilgapps/offer/views.py">
+    <entry file="file://$PROJECT_DIR$/ilgapps/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="297" column="10" lean-forward="true" selection-start-line="297" selection-start-column="10" selection-end-line="297" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-            <element signature="e#1310#5905#0" />
-            <element signature="e#5943#6301#0" />
-            <element signature="e#6345#7650#0" />
-            <element signature="e#8751#10113#0" />
-          </folding>
+        <state relative-caret-position="448">
+          <caret line="233" column="52" selection-start-line="233" selection-start-column="52" selection-end-line="233" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ilgapps/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="76" column="12" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ilg2020/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="209">
+          <caret line="106" column="12" lean-forward="true" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_resolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="126" column="40" lean-forward="true" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ilgapps/offer/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="297" column="29" selection-start-line="297" selection-start-column="22" selection-end-line="297" selection-end-column="29" />
+          <folding>
+            <element signature="e#24#54#0" expanded="true" />
+            <element signature="e#1310#5905#0" />
+            <element signature="e#5943#6301#0" />
+            <element signature="e#6345#7650#0" />
+          </folding>
         </state>
       </provider>
     </entry>

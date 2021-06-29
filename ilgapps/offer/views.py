@@ -295,10 +295,8 @@ def goodsOperation(request):
 
 @csrf_exempt
 def queryGoods(request):
-    ll = 1
-    data = request.POST.get("flag")
-    print(data)
-    flag = 1
+    data = json.loads(request.body)
+    flag = data['flag']
     if flag==0:
         goodsObj = Goods.objects.get(goods_id = id)
     else:

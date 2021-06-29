@@ -39,19 +39,19 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ilgapps',
-    # 'channels',
+    'channels',
 )
 
-# ASGI_APPLICATION = 'ilg2020.asgi.application'
+ASGI_APPLICATION = 'ilg2020.asgi.application'
 #
-# CHANNEL_LAYERS = {
-#     'default': {
-#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
-#         'CONFIG': {
-#             "hosts": [('127.0.0.1', 6379)],
-#         },
-#     },
-# }
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 
 MIDDLEWARE_CLASSES = (
@@ -104,7 +104,8 @@ USE_L10N = True
 USE_TZ = False
 
 
-
+# 数据库id自定义主键
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 # PROJECT_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))# 获取当前程序的绝对路径
